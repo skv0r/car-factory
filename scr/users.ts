@@ -40,13 +40,5 @@ class F2WalletAdapter implements IPaymentSystem {
     }
 }
 
-// Пример использования адаптера
-function processOrder(paymentSystem: IPaymentSystem, amount: number) {
-    console.log(paymentSystem.processPayment(amount));
-}
-
-const webmoney = new WebmoneyAdapter(new Webmoney());
-const f2wallet = new F2WalletAdapter(new F2Wallet());
-
-processOrder(webmoney, 100);
-processOrder(f2wallet, 50);
+// Экспорт классов
+export { Webmoney, F2Wallet, WebmoneyAdapter, F2WalletAdapter };
